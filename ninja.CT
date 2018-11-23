@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="26">
+  <Forms>
+    <CETrainer Class="TTrainerForm" Encoding="Ascii85">eN#/x):ZrSWgP!=fGr!AU3I_]kcHZKYGO}UPGN@*D}TtHlu=v2,;JZ1U@:{97hne0N@GYsU3os*?8@5Z]sn}b@NSCslxkK;t{m2c2bk:qS1F$x:kD*l%/IL^IDddc*y6r8=oC}prStK]!*#,{B{YBz6pNZm)=KFTcZf]4p_.!$,eh:VT:{]$*)/q@;y0W)(AG%4gliB^Op1-DO*}?q$.lMaY{*#Q*v,xItSjgO.5V=GNiIV2g-%h9CM2}W?E:g,B2h1-H*7*9yD.XrTqLsD#_vh,srt={uk2}IGe?T^EetE4vRS4puHgv=8e8$s7$qYVXV*}orZk(aV^mT[zH2kSI}e:6H_8?Ds_LF6B6rbD=M$0zlc5+3qs[C@1U8Fg%?+8EKBG%:tmgc-F}Fy4b[:gCnwxSNfMKe5Ob^KUT0ftva{OT#z4(,BgWfr8/x*1_A^uA)ihNB]e9#LIVZCYP!oB.mE{PL/nHB#L/xDs1SP7,l(?.aML/(4ja,,k50d4g;=fagV%.(r]k7x)A.xsGBu-41tT7MmCz4DMOmr8FVpRH]Mpl^aRkgnOmO(K-_z(]</CETrainer>
+  </Forms>
+  <CheatEntries>
+    <CheatEntry>
+      <ID>80</ID>
+      <Description>"found"</Description>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>4</ID>
+          <Description>"Shuriken Ammo"</Description>
+          <VariableType>4 Bytes</VariableType>
+          <Address>"ninja.exe"+005E8EA0</Address>
+          <Offsets>
+            <Offset>0</Offset>
+            <Offset>5A8</Offset>
+            <Offset>D8</Offset>
+            <Offset>4</Offset>
+            <Offset>684</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>44</ID>
+          <Description>"Camera distance to Player"</Description>
+          <LastState Value="719.9904785" RealAddress="373949C0"/>
+          <VariableType>Float</VariableType>
+          <Address>"ninja.exe"+005DE190</Address>
+          <Offsets>
+            <Offset>11C</Offset>
+          </Offsets>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>117</ID>
+          <Description>"Camera Z"</Description>
+          <LastState Value="-221.5170593" RealAddress="31E4A084"/>
+          <VariableType>Float</VariableType>
+          <Address>"ninja.exe"+004BC874</Address>
+          <Offsets>
+            <Offset>2C</Offset>
+            <Offset>38</Offset>
+            <Offset>28C</Offset>
+          </Offsets>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>119</ID>
+      <Description>"Camera Collision"</Description>
+      <LastState Value="" Activated="1" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>118</ID>
+          <Description>"Disable Camera Collision 1"</Description>
+          <LastState Activated="1"/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,ninja.exe,D9 56 10 8D 84 24 84 00 00 00) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  fst st(0)
+  lea eax,[esp+00000084]
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+  nop
+  nop
+  nop
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db D9 56 10 8D 84 24 84 00 00 00
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+</AssemblerScript>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>120</ID>
+          <Description>"Disable Camera Collision 2"</Description>
+          <LastState Activated="1"/>
+          <VariableType>Auto Assembler Script</VariableType>
+          <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,ninja.exe,D9 9F C8 05 00 00) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  fstp st(0)
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db D9 9F C8 05 00 00
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+</AssemblerScript>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+  </CheatEntries>
+  <CheatCodes>
+    <CodeEntry>
+      <Description>Code :fstp dword ptr [esi+38]</Description>
+      <Address>004C97DB</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>C97DB</ModuleNameOffset>
+      <Before>
+        <Byte>34</Byte>
+        <Byte>D9</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>0C</Byte>
+      </Before>
+      <Actual>
+        <Byte>D9</Byte>
+        <Byte>5E</Byte>
+        <Byte>38</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>08</Byte>
+        <Byte>D9</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov ecx,[ninja.ZGEOM_CamAlignOverride_ClassInfo+D8]</Description>
+      <Address>00634298</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>234298</ModuleNameOffset>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>75</Byte>
+        <Byte>2B</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>0D</Byte>
+        <Byte>90</Byte>
+        <Byte>E1</Byte>
+        <Byte>9D</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>41</Byte>
+        <Byte>10</Byte>
+        <Byte>51</Byte>
+        <Byte>D9</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov edx,[ninja.ZGEOM_CamAlignOverride_ClassInfo+D8]</Description>
+      <Address>006342E6</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>2342E6</ModuleNameOffset>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>75</Byte>
+        <Byte>2B</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>15</Byte>
+        <Byte>90</Byte>
+        <Byte>E1</Byte>
+        <Byte>9D</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>42</Byte>
+        <Byte>10</Byte>
+        <Byte>51</Byte>
+        <Byte>D9</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov ecx,[ninja.ZGEOM_CamAlignOverride_ClassInfo+D8]</Description>
+      <Address>0063283A</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>23283A</ModuleNameOffset>
+      <Before>
+        <Byte>E0</Byte>
+        <Byte>D9</Byte>
+        <Byte>5C</Byte>
+        <Byte>24</Byte>
+        <Byte>60</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>0D</Byte>
+        <Byte>90</Byte>
+        <Byte>E1</Byte>
+        <Byte>9D</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>60</Byte>
+        <Byte>D9</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fld dword ptr [ecx+000005C8]</Description>
+      <Address>0062BB41</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>22BB41</ModuleNameOffset>
+      <Before>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>CC</Byte>
+        <Byte>51</Byte>
+      </Before>
+      <Actual>
+        <Byte>D9</Byte>
+        <Byte>81</Byte>
+        <Byte>C8</Byte>
+        <Byte>05</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Actual>
+      <After>
+        <Byte>8B</Byte>
+        <Byte>91</Byte>
+        <Byte>08</Byte>
+        <Byte>07</Byte>
+        <Byte>00</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fstp dword ptr [esi+10]</Description>
+      <Address>00630266</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>230266</ModuleNameOffset>
+      <Before>
+        <Byte>46</Byte>
+        <Byte>30</Byte>
+        <Byte>89</Byte>
+        <Byte>46</Byte>
+        <Byte>34</Byte>
+      </Before>
+      <Actual>
+        <Byte>D9</Byte>
+        <Byte>5E</Byte>
+        <Byte>10</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>EE</Byte>
+        <Byte>D9</Byte>
+        <Byte>56</Byte>
+        <Byte>2C</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fstp dword ptr [ecx+04]</Description>
+      <Address>004252EC</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>252EC</ModuleNameOffset>
+      <Before>
+        <Byte>08</Byte>
+        <Byte>D9</Byte>
+        <Byte>CA</Byte>
+        <Byte>D9</Byte>
+        <Byte>19</Byte>
+      </Before>
+      <Actual>
+        <Byte>D9</Byte>
+        <Byte>59</Byte>
+        <Byte>04</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>59</Byte>
+        <Byte>08</Byte>
+        <Byte>5B</Byte>
+        <Byte>83</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fstp dword ptr [eax+04]</Description>
+      <Address>00423D68</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>23D68</ModuleNameOffset>
+      <Before>
+        <Byte>18</Byte>
+        <Byte>D9</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>0C</Byte>
+      </Before>
+      <Actual>
+        <Byte>D9</Byte>
+        <Byte>58</Byte>
+        <Byte>04</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>44</Byte>
+        <Byte>24</Byte>
+        <Byte>10</Byte>
+        <Byte>D9</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fstp dword ptr [edx+04]</Description>
+      <Address>00423E80</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>23E80</ModuleNameOffset>
+      <Before>
+        <Byte>C9</Byte>
+        <Byte>D9</Byte>
+        <Byte>1A</Byte>
+        <Byte>D9</Byte>
+        <Byte>C9</Byte>
+      </Before>
+      <Actual>
+        <Byte>D9</Byte>
+        <Byte>5A</Byte>
+        <Byte>04</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>5A</Byte>
+        <Byte>08</Byte>
+        <Byte>5B</Byte>
+        <Byte>83</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fstp dword ptr [ecx+04]</Description>
+      <Address>00423F15</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>23F15</ModuleNameOffset>
+      <Before>
+        <Byte>08</Byte>
+        <Byte>D9</Byte>
+        <Byte>CA</Byte>
+        <Byte>D9</Byte>
+        <Byte>19</Byte>
+      </Before>
+      <Actual>
+        <Byte>D9</Byte>
+        <Byte>59</Byte>
+        <Byte>04</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>59</Byte>
+        <Byte>08</Byte>
+        <Byte>83</Byte>
+        <Byte>C4</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fstp dword ptr [ecx+04]</Description>
+      <Address>004252EC</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>252EC</ModuleNameOffset>
+      <Before>
+        <Byte>08</Byte>
+        <Byte>D9</Byte>
+        <Byte>CA</Byte>
+        <Byte>D9</Byte>
+        <Byte>19</Byte>
+      </Before>
+      <Actual>
+        <Byte>D9</Byte>
+        <Byte>59</Byte>
+        <Byte>04</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>59</Byte>
+        <Byte>08</Byte>
+        <Byte>5B</Byte>
+        <Byte>83</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fstp dword ptr [edx+08]</Description>
+      <Address>00423E83</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>23E83</ModuleNameOffset>
+      <Before>
+        <Byte>D9</Byte>
+        <Byte>C9</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </Before>
+      <Actual>
+        <Byte>D9</Byte>
+        <Byte>5A</Byte>
+        <Byte>08</Byte>
+      </Actual>
+      <After>
+        <Byte>5B</Byte>
+        <Byte>83</Byte>
+        <Byte>C4</Byte>
+        <Byte>08</Byte>
+        <Byte>C2</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Code :fst st(0)</Description>
+      <Address>00630139</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>230139</ModuleNameOffset>
+      <Before>
+        <Byte>24</Byte>
+        <Byte>80</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+      </Before>
+      <Actual>
+        <Byte>DD</Byte>
+        <Byte>D0</Byte>
+      </Actual>
+      <After>
+        <Byte>90</Byte>
+        <Byte>8D</Byte>
+        <Byte>84</Byte>
+        <Byte>24</Byte>
+        <Byte>84</Byte>
+      </After>
+    </CodeEntry>
+  </CheatCodes>
+  <UserdefinedSymbols/>
+  <LuaScript>--TRAINERGENERATORSTART--
+--This is autogenerated code. Changing code in this block will
+--get erased and rewritten if you regenerate the trainer code
+
+--Uncomment the following line if this is a Cheat Table format trainer and you don't want CE to show (Tip, save as .CETRAINER alternatively)
+--hideAllCEWindows()
+
+RequiredCEVersion=6.7
+if (getCEVersion==nil) or (getCEVersion()&lt;RequiredCEVersion) then
+  messageDialog('Please install Cheat Engine '..RequiredCEVersion, mtError, mbOK)
+  closeCE()
+end
+addresslist=getAddressList()
+
+
+CETrainer.SEPERATOR.Visible=false
+
+getAutoAttachList().add("ninja.exe")
+gPlaySoundOnAction=false
+CETrainer.show()
+function AboutClick()
+  showMessage(gAboutText)
+end
+gAboutText=[[This trainer was made by Cheat Engine
+www.cheatengine.org]]
+
+function CloseClick()
+  --called by the close button onClick event, and when closing the form
+  closeCE()
+  return caFree --onClick doesn't care, but onClose would like a result
+end
+
+--TRAINERGENERATORSTOP--
+</LuaScript>
+</CheatTable>
