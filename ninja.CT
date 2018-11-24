@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CheatTable CheatEngineTableVersion="26">
-  <Forms>
-    <CETrainer Class="TTrainerForm" Encoding="Ascii85">eN#/x):ZrSWgP!=fGr!AU3I_]kcHZKYGO}UPGN@*D}TtHlu=v2,;JZ1U@:{97hne0N@GYsU3os*?8@5Z]sn}b@NSCslxkK;t{m2c2bk:qS1F$x:kD*l%/IL^IDddc*y6r8=oC}prStK]!*#,{B{YBz6pNZm)=KFTcZf]4p_.!$,eh:VT:{]$*)/q@;y0W)(AG%4gliB^Op1-DO*}?q$.lMaY{*#Q*v,xItSjgO.5V=GNiIV2g-%h9CM2}W?E:g,B2h1-H*7*9yD.XrTqLsD#_vh,srt={uk2}IGe?T^EetE4vRS4puHgv=8e8$s7$qYVXV*}orZk(aV^mT[zH2kSI}e:6H_8?Ds_LF6B6rbD=M$0zlc5+3qs[C@1U8Fg%?+8EKBG%:tmgc-F}Fy4b[:gCnwxSNfMKe5Ob^KUT0ftva{OT#z4(,BgWfr8/x*1_A^uA)ihNB]e9#LIVZCYP!oB.mE{PL/nHB#L/xDs1SP7,l(?.aML/(4ja,,k50d4g;=fagV%.(r]k7x)A.xsGBu-41tT7MmCz4DMOmr8FVpRH]Mpl^aRkgnOmO(K-_z(]</CETrainer>
-  </Forms>
   <CheatEntries>
     <CheatEntry>
       <ID>80</ID>
-      <Description>"found"</Description>
+      <Description>"Miscellaneous"</Description>
       <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
@@ -26,7 +23,7 @@
         <CheatEntry>
           <ID>44</ID>
           <Description>"Camera distance to Player"</Description>
-          <LastState Value="719.9904785" RealAddress="373949C0"/>
+          <LastState Value="720.8378296" RealAddress="3A2339C0"/>
           <VariableType>Float</VariableType>
           <Address>"ninja.exe"+005DE190</Address>
           <Offsets>
@@ -36,7 +33,7 @@
         <CheatEntry>
           <ID>117</ID>
           <Description>"Camera Z"</Description>
-          <LastState Value="-221.5170593" RealAddress="31E4A084"/>
+          <LastState Value="-6.026672363" RealAddress="34E47F64"/>
           <VariableType>Float</VariableType>
           <Address>"ninja.exe"+004BC874</Address>
           <Offsets>
@@ -48,17 +45,23 @@
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
-      <ID>119</ID>
-      <Description>"Camera Collision"</Description>
-      <LastState Value="" Activated="1" RealAddress="00000000"/>
+      <ID>165</ID>
+      <Description>"Camera"</Description>
+      <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
-          <ID>118</ID>
-          <Description>"Disable Camera Collision 1"</Description>
-          <LastState Activated="1"/>
-          <VariableType>Auto Assembler Script</VariableType>
-          <AssemblerScript>[ENABLE]
+          <ID>119</ID>
+          <Description>"Camera Collision"</Description>
+          <LastState Value="" Activated="1" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>167</ID>
+              <Description>"Camera Collision 1"</Description>
+              <LastState Activated="1"/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
 
 aobscanmodule(INJECT,ninja.exe,D9 56 10 8D 84 24 84 00 00 00) // should be unique
 alloc(newmem,$1000)
@@ -91,13 +94,13 @@ INJECT:
 unregistersymbol(INJECT)
 dealloc(newmem)
 </AssemblerScript>
-        </CheatEntry>
-        <CheatEntry>
-          <ID>120</ID>
-          <Description>"Disable Camera Collision 2"</Description>
-          <LastState Activated="1"/>
-          <VariableType>Auto Assembler Script</VariableType>
-          <AssemblerScript>[ENABLE]
+            </CheatEntry>
+            <CheatEntry>
+              <ID>168</ID>
+              <Description>"Camera Collision 2"</Description>
+              <LastState Activated="1"/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
 
 aobscanmodule(INJECT,ninja.exe,D9 9F C8 05 00 00) // should be unique
 alloc(newmem,$1000)
@@ -125,6 +128,28 @@ INJECT:
 unregistersymbol(INJECT)
 dealloc(newmem)
 </AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
+        </CheatEntry>
+      </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>166</ID>
+      <Description>"Player"</Description>
+      <LastState Value="" RealAddress="00000000"/>
+      <GroupHeader>1</GroupHeader>
+      <CheatEntries>
+        <CheatEntry>
+          <ID>164</ID>
+          <Description>"PlayerZ"</Description>
+          <LastState Value="-302.7100525" RealAddress="3A016900"/>
+          <VariableType>Float</VariableType>
+          <Address>"ninja.exe"+004B665C</Address>
+          <Offsets>
+            <Offset>28</Offset>
+            <Offset>4A4</Offset>
+            <Offset>4A4</Offset>
+          </Offsets>
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>

@@ -1,6 +1,6 @@
 [ENABLE]
 
-aobscanmodule(INJECT,ninja.exe,D9 9F C8 05 00 00) // should be unique
+aobscanmodule(INJECT,ninja.exe,D9 58 04 D9 44 24 10 D9 58 08 C3) // should be unique
 alloc(newmem,$1000)
 
 label(code)
@@ -10,10 +10,12 @@ newmem:
 
 code:
   fstp st(0)
+  fld dword ptr [esp+10]
   jmp return
 
 INJECT:
   jmp newmem
+  nop
   nop
 return:
 registersymbol(INJECT)
@@ -21,7 +23,8 @@ registersymbol(INJECT)
 [DISABLE]
 
 INJECT:
-  db D9 9F C8 05 00 00
+  db D9 58 04 D9 44 24 10
 
 unregistersymbol(INJECT)
 dealloc(newmem)
+

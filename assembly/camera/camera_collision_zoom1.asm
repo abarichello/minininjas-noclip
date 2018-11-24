@@ -1,6 +1,9 @@
+define(address,"ninja.exe"+230139)
+define(bytes,DD D0 90 8D 84 24 84 00 00 00)
+
 [ENABLE]
 
-aobscanmodule(INJECT,ninja.exe,D9 56 10 8D 84 24 84 00 00 00) // should be unique
+assert(address,bytes)
 alloc(newmem,$1000)
 
 label(code)
@@ -10,10 +13,11 @@ newmem:
 
 code:
   fst st(0)
+  nop 
   lea eax,[esp+00000084]
   jmp return
 
-INJECT:
+address:
   jmp newmem
   nop
   nop
@@ -21,12 +25,12 @@ INJECT:
   nop
   nop
 return:
-registersymbol(INJECT)
 
 [DISABLE]
 
-INJECT:
-  db D9 56 10 8D 84 24 84 00 00 00
+address:
+  db bytes
+  fst dword ptr [esi+10]
+  lea eax,[esp+00000084]
 
-unregistersymbol(INJECT)
 dealloc(newmem)
