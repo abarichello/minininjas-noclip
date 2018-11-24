@@ -10,6 +10,7 @@
         <CheatEntry>
           <ID>4</ID>
           <Description>"Shuriken Ammo"</Description>
+          <LastState Value="926923612" RealAddress="373FBB0C"/>
           <VariableType>4 Bytes</VariableType>
           <Address>"ninja.exe"+005E8EA0</Address>
           <Offsets>
@@ -23,7 +24,7 @@
         <CheatEntry>
           <ID>44</ID>
           <Description>"Camera distance to Player"</Description>
-          <LastState Value="720.8378296" RealAddress="3A2339C0"/>
+          <LastState Value="718.1488037" RealAddress="373CA9C0"/>
           <VariableType>Float</VariableType>
           <Address>"ninja.exe"+005DE190</Address>
           <Offsets>
@@ -33,7 +34,7 @@
         <CheatEntry>
           <ID>117</ID>
           <Description>"Camera Z"</Description>
-          <LastState Value="-6.026672363" RealAddress="34E47F64"/>
+          <LastState Value="-269.482605" RealAddress="31E19F44"/>
           <VariableType>Float</VariableType>
           <Address>"ninja.exe"+004BC874</Address>
           <Offsets>
@@ -53,13 +54,13 @@
         <CheatEntry>
           <ID>119</ID>
           <Description>"Camera Collision"</Description>
-          <LastState Value="" Activated="1" RealAddress="00000000"/>
+          <LastState Value="" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
               <ID>167</ID>
               <Description>"Camera Collision 1"</Description>
-              <LastState Activated="1"/>
+              <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -98,7 +99,7 @@ dealloc(newmem)
             <CheatEntry>
               <ID>168</ID>
               <Description>"Camera Collision 2"</Description>
-              <LastState Activated="1"/>
+              <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -140,16 +141,136 @@ dealloc(newmem)
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
-          <ID>164</ID>
-          <Description>"PlayerZ"</Description>
-          <LastState Value="-302.7100525" RealAddress="3A016900"/>
-          <VariableType>Float</VariableType>
-          <Address>"ninja.exe"+004B665C</Address>
-          <Offsets>
-            <Offset>28</Offset>
-            <Offset>4A4</Offset>
-            <Offset>4A4</Offset>
-          </Offsets>
+          <ID>170</ID>
+          <Description>"Position"</Description>
+          <LastState Value="" RealAddress="00000000"/>
+          <GroupHeader>1</GroupHeader>
+          <CheatEntries>
+            <CheatEntry>
+              <ID>164</ID>
+              <Description>"Player Z"</Description>
+              <LastState Value="-476.9079895" RealAddress="371B2900"/>
+              <VariableType>Float</VariableType>
+              <Address>"ninja.exe"+004B665C</Address>
+              <Offsets>
+                <Offset>28</Offset>
+                <Offset>4A4</Offset>
+                <Offset>4A4</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>169</ID>
+              <Description>"Disable Z Load"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,ninja.exe,D9 5F 28 D9 44 24 0C) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  fstp st(0)
+  fld dword ptr [esp+0C]
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db D9 5F 28 D9 44 24 0C
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>171</ID>
+              <Description>"Disable Coordinate 1 Load"</Description>
+              <LastState Activated="1"/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,ninja.exe,D9 5F 24 D9 44 24 14) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  fstp st(0)
+  fld dword ptr [esp+14]
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db D9 5F 24 D9 44 24 14
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>172</ID>
+              <Description>"Disable Coordinate 2 Load"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,ninja.exe,D9 5F 2C 81 4F 3C 00 00 10 00) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  fstp st(0)
+  or [edi+3C],00100000
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+  nop
+  nop
+  nop
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db D9 5F 2C 81 4F 3C 00 00 10 00
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+</AssemblerScript>
+            </CheatEntry>
+          </CheatEntries>
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>
@@ -527,4 +648,21 @@ end
 
 --TRAINERGENERATORSTOP--
 </LuaScript>
+  <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"ninja.exe"+2DC18</Address>
+      <Comment>Coordinate 1
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"ninja.exe"+2DC1F</Address>
+      <Comment>Coordinate Z
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"ninja.exe"+2DC26</Address>
+      <Comment>Coordinate 2
+</Comment>
+    </DisassemblerComment>
+  </DisassemblerComments>
 </CheatTable>
