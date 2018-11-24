@@ -23,7 +23,6 @@
         <CheatEntry>
           <ID>44</ID>
           <Description>"Camera distance to Player"</Description>
-          <LastState Value="738.6063843" RealAddress="3733E9C0"/>
           <VariableType>Float</VariableType>
           <Address>"ninja.exe"+005DE190</Address>
           <Offsets>
@@ -33,7 +32,6 @@
         <CheatEntry>
           <ID>117</ID>
           <Description>"Camera Z"</Description>
-          <LastState Value="728.2542114" RealAddress="31F1FCC4"/>
           <VariableType>Float</VariableType>
           <Address>"ninja.exe"+004BC874</Address>
           <Offsets>
@@ -59,7 +57,7 @@
             <CheatEntry>
               <ID>167</ID>
               <Description>"Disable Camera Collision 1"</Description>
-              <LastState/>
+              <LastState Activated="1"/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -98,7 +96,7 @@ dealloc(newmem)
             <CheatEntry>
               <ID>168</ID>
               <Description>"Disable Camera Collision 2"</Description>
-              <LastState/>
+              <LastState Activated="1"/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -148,7 +146,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>164</ID>
               <Description>"Player Z"</Description>
-              <LastState Value="963.0299683" RealAddress="37113960"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+004B665C</Address>
               <Offsets>
@@ -156,43 +153,6 @@ dealloc(newmem)
                 <Offset>4A4</Offset>
                 <Offset>4A4</Offset>
               </Offsets>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>169</ID>
-              <Description>"Disable Z Load"</Description>
-              <LastState/>
-              <VariableType>Auto Assembler Script</VariableType>
-              <AssemblerScript>[ENABLE]
-
-aobscanmodule(INJECT,ninja.exe,D9 5F 28 D9 44 24 0C) // should be unique
-alloc(newmem,$1000)
-
-label(code)
-label(return)
-
-newmem:
-
-code:
-  fstp st(0)
-  fld dword ptr [esp+0C]
-  jmp return
-
-INJECT:
-  jmp newmem
-  nop
-  nop
-return:
-registersymbol(INJECT)
-
-[DISABLE]
-
-INJECT:
-  db D9 5F 28 D9 44 24 0C
-
-unregistersymbol(INJECT)
-dealloc(newmem)
-
-</AssemblerScript>
             </CheatEntry>
             <CheatEntry>
               <ID>171</ID>
@@ -267,6 +227,43 @@ INJECT:
 
 unregistersymbol(INJECT)
 dealloc(newmem)
+</AssemblerScript>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>169</ID>
+              <Description>"Disable Coordinate Z Load"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,ninja.exe,D9 5F 28 D9 44 24 0C) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  fstp st(0)
+  fld dword ptr [esp+0C]
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db D9 5F 28 D9 44 24 0C
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
 </AssemblerScript>
             </CheatEntry>
           </CheatEntries>
@@ -704,6 +701,11 @@ end
     <DisassemblerComment>
       <Address>"ninja.exe"+2DC26</Address>
       <Comment>Coordinate 2
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>157FC584</Address>
+      <Comment>pop esp
 </Comment>
     </DisassemblerComment>
   </DisassemblerComments>
