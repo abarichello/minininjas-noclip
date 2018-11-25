@@ -6,21 +6,6 @@
       <Description>"Miscellaneous"</Description>
       <LastState Value="" RealAddress="00000000"/>
       <GroupHeader>1</GroupHeader>
-      <CheatEntries>
-        <CheatEntry>
-          <ID>4</ID>
-          <Description>"Shuriken Ammo"</Description>
-          <VariableType>4 Bytes</VariableType>
-          <Address>"ninja.exe"+005E8EA0</Address>
-          <Offsets>
-            <Offset>0</Offset>
-            <Offset>5A8</Offset>
-            <Offset>D8</Offset>
-            <Offset>4</Offset>
-            <Offset>684</Offset>
-          </Offsets>
-        </CheatEntry>
-      </CheatEntries>
     </CheatEntry>
     <CheatEntry>
       <ID>165</ID>
@@ -37,40 +22,40 @@
             <CheatEntry>
               <ID>182</ID>
               <Description>"X"</Description>
+              <LastState Value="7086.295898" RealAddress="313BF990"/>
               <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+004BC874</Address>
+              <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
                 <Offset>28</Offset>
-                <Offset>38</Offset>
-                <Offset>28C</Offset>
+                <Offset>2A0</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
-              <ID>117</ID>
+              <ID>205</ID>
               <Description>"Z"</Description>
+              <LastState Value="1683.587158" RealAddress="313BF994"/>
               <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+004BC874</Address>
+              <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
                 <Offset>2C</Offset>
-                <Offset>38</Offset>
-                <Offset>28C</Offset>
+                <Offset>2A0</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
               <ID>183</ID>
               <Description>"Y"</Description>
+              <LastState Value="791.5513916" RealAddress="313BF998"/>
               <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+004BC874</Address>
+              <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
                 <Offset>30</Offset>
-                <Offset>38</Offset>
-                <Offset>28C</Offset>
+                <Offset>2A0</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
               <ID>44</ID>
               <Description>"Distance to Player"</Description>
-              <LastState Value="716.6611938" RealAddress="19113900"/>
+              <LastState Value="728.4968262" RealAddress="36D21900"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE190</Address>
               <Offsets>
@@ -80,7 +65,7 @@
             <CheatEntry>
               <ID>179</ID>
               <Description>"Neg. Distance"</Description>
-              <LastState Value="-716.6611938" RealAddress="191138FC"/>
+              <LastState Value="-728.4968262" RealAddress="36D218FC"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE190</Address>
               <Offsets>
@@ -221,34 +206,34 @@ dealloc(newmem)
             <CheatEntry>
               <ID>175</ID>
               <Description>"X"</Description>
+              <LastState Value="6950.034668" RealAddress="2B3D9EBC"/>
               <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+004B665C</Address>
+              <Address>"ninja.exe"+0041B748</Address>
               <Offsets>
                 <Offset>24</Offset>
-                <Offset>4A4</Offset>
-                <Offset>4A4</Offset>
+                <Offset>C0</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
-              <ID>164</ID>
+              <ID>238</ID>
               <Description>"Z"</Description>
+              <LastState Value="1316.009644" RealAddress="2B3D9EC0"/>
               <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+004B665C</Address>
+              <Address>"ninja.exe"+0041B748</Address>
               <Offsets>
                 <Offset>28</Offset>
-                <Offset>4A4</Offset>
-                <Offset>4A4</Offset>
+                <Offset>C0</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
               <ID>178</ID>
               <Description>"Y"</Description>
+              <LastState Value="246.0157013" RealAddress="2B3D9EC4"/>
               <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+004B665C</Address>
+              <Address>"ninja.exe"+0041B748</Address>
               <Offsets>
                 <Offset>2C</Offset>
-                <Offset>4A4</Offset>
-                <Offset>4A4</Offset>
+                <Offset>C0</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
@@ -409,13 +394,6 @@ dealloc(newmem)
 </AssemblerScript>
         </CheatEntry>
       </CheatEntries>
-    </CheatEntry>
-    <CheatEntry>
-      <ID>184</ID>
-      <Description>"Float"</Description>
-      <LastState Value="716.6611938" RealAddress="19113980"/>
-      <VariableType>Float</VariableType>
-      <Address>19113980</Address>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
@@ -757,75 +735,6 @@ dealloc(newmem)
     </CodeEntry>
   </CheatCodes>
   <UserdefinedSymbols/>
-  <Structures StructVersion="2">
-    <Structure Name="unnamed structure" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
-      <Elements>
-        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" RLECount="136" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="544" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Hexadecimal"/>
-        <Element Offset="548" Vartype="4 Bytes" Bytesize="4" RLECount="3" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="560" Vartype="Pointer" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="564" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="568" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Hexadecimal"/>
-        <Element Offset="572" Vartype="4 Bytes" Bytesize="4" RLECount="3" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="584" Vartype="Pointer" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="588" Vartype="4 Bytes" Bytesize="4" RLECount="156" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1212" Vartype="Pointer" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1216" Vartype="4 Bytes" Bytesize="4" RLECount="3" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1228" Vartype="Pointer" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1232" Vartype="4 Bytes" Bytesize="4" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1240" Vartype="Pointer" Bytesize="4" RLECount="2" PointerSize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1248" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1252" Vartype="Pointer" Bytesize="4" RLECount="2" PointerSize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1260" Vartype="4 Bytes" Bytesize="4" RLECount="38" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1412" Vartype="Byte" Bytesize="1" RLECount="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1416" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1420" Vartype="Pointer" Bytesize="4" RLECount="3" PointerSize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1432" Vartype="4 Bytes" Bytesize="4" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1440" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Hexadecimal"/>
-        <Element Offset="1444" Vartype="Pointer" Bytesize="4" RLECount="2" PointerSize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1452" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Hexadecimal"/>
-        <Element Offset="1456" Vartype="Pointer" Bytesize="4" RLECount="2" PointerSize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1464" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1468" Vartype="Pointer" Bytesize="4" RLECount="4" PointerSize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1484" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Hexadecimal"/>
-        <Element Offset="1488" Vartype="Pointer" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1492" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Hexadecimal"/>
-        <Element Offset="1496" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1500" Vartype="Pointer" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1504" Vartype="4 Bytes" Bytesize="4" RLECount="2" DisplayMethod="Hexadecimal"/>
-        <Element Offset="1512" Vartype="Pointer" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1516" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Hexadecimal"/>
-        <Element Offset="1520" Vartype="Byte" Bytesize="1" RLECount="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1524" Vartype="4 Bytes" Bytesize="4" RLECount="2" DisplayMethod="Hexadecimal"/>
-        <Element Offset="1532" Vartype="4 Bytes" Bytesize="4" RLECount="3" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1544" Vartype="Pointer" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1548" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Hexadecimal"/>
-        <Element Offset="1552" Vartype="4 Bytes" Bytesize="4" RLECount="2" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1560" Vartype="Unicode String" Bytesize="55" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1615" Vartype="Byte" Bytesize="1" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1616" Vartype="Unicode String" Bytesize="27" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1643" Vartype="Byte" Bytesize="1" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1644" Vartype="Unicode String" Bytesize="13" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1657" Vartype="Byte" Bytesize="1" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1658" Vartype="Unicode String" Bytesize="6" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1664" Vartype="Pointer" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="1668" Vartype="4 Bytes" Bytesize="4" RLECount="493" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3640" Vartype="Pointer" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3644" Vartype="4 Bytes" Bytesize="4" RLECount="11" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3688" Vartype="Unicode String" Bytesize="10" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3698" Vartype="Unicode String" Bytesize="5" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3703" Vartype="Byte" Bytesize="1" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3704" Vartype="4 Bytes" Bytesize="4" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3708" Vartype="Unicode String" Bytesize="41" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3749" Vartype="Byte" Bytesize="1" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3750" Vartype="Unicode String" Bytesize="20" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3770" Vartype="Unicode String" Bytesize="10" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3780" Vartype="Unicode String" Bytesize="5" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3785" Vartype="Byte" Bytesize="1" RLECount="3" DisplayMethod="Unsigned Integer"/>
-        <Element Offset="3788" Vartype="4 Bytes" Bytesize="4" RLECount="77" DisplayMethod="Unsigned Integer"/>
-      </Elements>
-    </Structure>
-  </Structures>
   <LuaScript>--TRAINERGENERATORSTART--
 --This is autogenerated code. Changing code in this block will
 --get erased and rewritten if you regenerate the trainer code
