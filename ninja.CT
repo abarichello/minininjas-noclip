@@ -10,14 +10,14 @@
         <CheatEntry>
           <ID>243</ID>
           <Description>"Some sort of counter"</Description>
-          <LastState Value="0" RealAddress="30E8A9F8"/>
+          <LastState Value="3961421177" RealAddress="30E8A9F8"/>
           <VariableType>4 Bytes</VariableType>
           <Address>30E8A9F8</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>244</ID>
           <Description>"Counter related to dmg taken"</Description>
-          <LastState Value="1" RealAddress="30E8A9F4"/>
+          <LastState Value="0" RealAddress="30E8A9F4"/>
           <VariableType>4 Bytes</VariableType>
           <Address>30E8A9F4</Address>
         </CheatEntry>
@@ -38,7 +38,7 @@
             <CheatEntry>
               <ID>182</ID>
               <Description>"X"</Description>
-              <LastState Value="-11931.60156" RealAddress="313A7ED8"/>
+              <LastState Value="-1183.302734" RealAddress="30FAD930"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
@@ -49,18 +49,36 @@
             <CheatEntry>
               <ID>205</ID>
               <Description>"Z"</Description>
-              <LastState Value="2547.812012" RealAddress="313A7EDC"/>
+              <LastState Value="3700.693848" RealAddress="30FAD934"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
                 <Offset>2C</Offset>
                 <Offset>2A0</Offset>
               </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>33</Key>
+                  </Keys>
+                  <Value>200</Value>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>34</Key>
+                  </Keys>
+                  <Value>200</Value>
+                  <ID>1</ID>
+                </Hotkey>
+              </Hotkeys>
             </CheatEntry>
             <CheatEntry>
               <ID>183</ID>
               <Description>"Y"</Description>
-              <LastState Value="1606.265503" RealAddress="313A7EE0"/>
+              <LastState Value="-5643.418945" RealAddress="30FAD938"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
@@ -71,7 +89,7 @@
             <CheatEntry>
               <ID>44</ID>
               <Description>"Distance to Player"</Description>
-              <LastState Value="765.6915894" RealAddress="36E77900"/>
+              <LastState Value="722.3709106" RealAddress="36C39900"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE190</Address>
               <Offsets>
@@ -81,7 +99,7 @@
             <CheatEntry>
               <ID>179</ID>
               <Description>"Neg. Distance"</Description>
-              <LastState Value="-765.6915894" RealAddress="36E778FC"/>
+              <LastState Value="-722.3709106" RealAddress="36C398FC"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE190</Address>
               <Offsets>
@@ -134,7 +152,7 @@ dealloc(newmem)
             <CheatEntry>
               <ID>167</ID>
               <Description>"Disable Camera Collision 1"</Description>
-              <LastState/>
+              <LastState Activated="1"/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -173,7 +191,7 @@ dealloc(newmem)
             <CheatEntry>
               <ID>168</ID>
               <Description>"Disable Camera Collision 2"</Description>
-              <LastState/>
+              <LastState Activated="1"/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -223,7 +241,7 @@ dealloc(newmem)
             <CheatEntry>
               <ID>261</ID>
               <Description>"HP"</Description>
-              <LastState Value="150" RealAddress="15CE3224"/>
+              <LastState Value="500" Activated="1" RealAddress="309FB5C4"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+00293140</Address>
               <Offsets>
@@ -237,7 +255,7 @@ dealloc(newmem)
             <CheatEntry>
               <ID>262</ID>
               <Description>"Max HP"</Description>
-              <LastState Value="150" RealAddress="15CE3228"/>
+              <LastState Value="150" RealAddress="309FB5C8"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+00293140</Address>
               <Offsets>
@@ -294,35 +312,89 @@ dealloc(newmem)
             <CheatEntry>
               <ID>175</ID>
               <Description>"X"</Description>
-              <LastState Value="0" RealAddress="36B6204C"/>
+              <LastState Value="-1378.325806" RealAddress="3693BEBC"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+0041B74C</Address>
               <Offsets>
                 <Offset>24</Offset>
                 <Offset>130</Offset>
               </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>45</Key>
+                  </Keys>
+                  <Value>150</Value>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>46</Key>
+                  </Keys>
+                  <Value>150</Value>
+                  <ID>1</ID>
+                </Hotkey>
+              </Hotkeys>
             </CheatEntry>
             <CheatEntry>
               <ID>251</ID>
               <Description>"Z"</Description>
-              <LastState Value="0" RealAddress="36B62050"/>
+              <LastState Value="747.7648926" RealAddress="3693BEC0"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+0041B74C</Address>
               <Offsets>
                 <Offset>28</Offset>
                 <Offset>130</Offset>
               </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>33</Key>
+                  </Keys>
+                  <Value>200</Value>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>34</Key>
+                  </Keys>
+                  <Value>200</Value>
+                  <ID>1</ID>
+                </Hotkey>
+              </Hotkeys>
             </CheatEntry>
             <CheatEntry>
               <ID>238</ID>
               <Description>"Y"</Description>
-              <LastState Value="0" RealAddress="36B62054"/>
+              <LastState Value="-5110.842285" RealAddress="3693BEC4"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+0041B74C</Address>
               <Offsets>
                 <Offset>2C</Offset>
                 <Offset>130</Offset>
               </Offsets>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Increase Value</Action>
+                  <Keys>
+                    <Key>36</Key>
+                  </Keys>
+                  <Value>150</Value>
+                  <ID>0</ID>
+                </Hotkey>
+                <Hotkey>
+                  <Action>Decrease Value</Action>
+                  <Keys>
+                    <Key>35</Key>
+                  </Keys>
+                  <Value>150</Value>
+                  <ID>1</ID>
+                </Hotkey>
+              </Hotkeys>
             </CheatEntry>
             <CheatEntry>
               <ID>171</ID>
@@ -355,45 +427,6 @@ registersymbol(INJECT)
 
 INJECT:
   db D9 5F 24 D9 44 24 14
-
-unregistersymbol(INJECT)
-dealloc(newmem)
-</AssemblerScript>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>172</ID>
-              <Description>"Disable Coordinate 2 Load"</Description>
-              <LastState/>
-              <VariableType>Auto Assembler Script</VariableType>
-              <AssemblerScript>[ENABLE]
-
-aobscanmodule(INJECT,ninja.exe,D9 5F 2C 81 4F 3C 00 00 10 00) // should be unique
-alloc(newmem,$1000)
-
-label(code)
-label(return)
-
-newmem:
-
-code:
-  fstp st(0)
-  or [edi+3C],00100000
-  jmp return
-
-INJECT:
-  jmp newmem
-  nop
-  nop
-  nop
-  nop
-  nop
-return:
-registersymbol(INJECT)
-
-[DISABLE]
-
-INJECT:
-  db D9 5F 2C 81 4F 3C 00 00 10 00
 
 unregistersymbol(INJECT)
 dealloc(newmem)
@@ -434,6 +467,54 @@ INJECT:
 unregistersymbol(INJECT)
 dealloc(newmem)
 
+</AssemblerScript>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Toggle Activation</Action>
+                  <Keys>
+                    <Key>144</Key>
+                  </Keys>
+                  <ID>0</ID>
+                </Hotkey>
+              </Hotkeys>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>172</ID>
+              <Description>"Disable Coordinate 2 Load"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,ninja.exe,D9 5F 2C 81 4F 3C 00 00 10 00) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  fstp st(0)
+  or [edi+3C],00100000
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+  nop
+  nop
+  nop
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db D9 5F 2C 81 4F 3C 00 00 10 00
+
+unregistersymbol(INJECT)
+dealloc(newmem)
 </AssemblerScript>
             </CheatEntry>
           </CheatEntries>
@@ -1016,6 +1097,55 @@ dealloc(newmem)
         <Byte>08</Byte>
         <Byte>D8</Byte>
         <Byte>62</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fsub dword ptr [edx]</Description>
+      <Address>0042DA53</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>2DA53</ModuleNameOffset>
+      <Before>
+        <Byte>8B</Byte>
+        <Byte>14</Byte>
+        <Byte>24</Byte>
+        <Byte>D9</Byte>
+        <Byte>01</Byte>
+      </Before>
+      <Actual>
+        <Byte>D8</Byte>
+        <Byte>22</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>41</Byte>
+        <Byte>04</Byte>
+        <Byte>D8</Byte>
+        <Byte>62</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fadd dword ptr [edx+08]</Description>
+      <Address>00423F0E</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>23F0E</ModuleNameOffset>
+      <Before>
+        <Byte>42</Byte>
+        <Byte>04</Byte>
+        <Byte>D9</Byte>
+        <Byte>41</Byte>
+        <Byte>08</Byte>
+      </Before>
+      <Actual>
+        <Byte>D8</Byte>
+        <Byte>42</Byte>
+        <Byte>08</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>CA</Byte>
+        <Byte>D9</Byte>
+        <Byte>19</Byte>
+        <Byte>D9</Byte>
       </After>
     </CodeEntry>
   </CheatCodes>
