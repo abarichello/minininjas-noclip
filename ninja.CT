@@ -10,14 +10,14 @@
         <CheatEntry>
           <ID>243</ID>
           <Description>"Some sort of counter"</Description>
-          <LastState Value="3743336470" RealAddress="30E8A9F8"/>
+          <LastState Value="0" RealAddress="30E8A9F8"/>
           <VariableType>4 Bytes</VariableType>
           <Address>30E8A9F8</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>244</ID>
           <Description>"Counter related to dmg taken"</Description>
-          <LastState Value="1517370087" RealAddress="30E8A9F4"/>
+          <LastState Value="1" RealAddress="30E8A9F4"/>
           <VariableType>4 Bytes</VariableType>
           <Address>30E8A9F4</Address>
         </CheatEntry>
@@ -38,7 +38,7 @@
             <CheatEntry>
               <ID>182</ID>
               <Description>"X"</Description>
-              <LastState Value="26946.87305" RealAddress="2AE0E158"/>
+              <LastState Value="-11931.60156" RealAddress="313A7ED8"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
@@ -49,7 +49,7 @@
             <CheatEntry>
               <ID>205</ID>
               <Description>"Z"</Description>
-              <LastState Value="2991.092529" RealAddress="2AE0E15C"/>
+              <LastState Value="2547.812012" RealAddress="313A7EDC"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
@@ -60,7 +60,7 @@
             <CheatEntry>
               <ID>183</ID>
               <Description>"Y"</Description>
-              <LastState Value="8918.920898" RealAddress="2AE0E160"/>
+              <LastState Value="1606.265503" RealAddress="313A7EE0"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
@@ -71,7 +71,7 @@
             <CheatEntry>
               <ID>44</ID>
               <Description>"Distance to Player"</Description>
-              <LastState Value="717.2860718" RealAddress="17958900"/>
+              <LastState Value="765.6915894" RealAddress="36E77900"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE190</Address>
               <Offsets>
@@ -81,7 +81,7 @@
             <CheatEntry>
               <ID>179</ID>
               <Description>"Neg. Distance"</Description>
-              <LastState Value="-717.2860718" RealAddress="179588FC"/>
+              <LastState Value="-765.6915894" RealAddress="36E778FC"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE190</Address>
               <Offsets>
@@ -127,6 +127,7 @@ dealloc(newmem)
         <CheatEntry>
           <ID>119</ID>
           <Description>"Camera Collision"</Description>
+          <Options moActivateChildrenAsWell="1"/>
           <LastState Value="" Activated="1" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
@@ -220,35 +221,37 @@ dealloc(newmem)
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
-              <ID>249</ID>
-              <Description>"Current HP"</Description>
-              <LastState Value="150" RealAddress="310C239C"/>
+              <ID>261</ID>
+              <Description>"HP"</Description>
+              <LastState Value="150" RealAddress="15CE3224"/>
               <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+00483714</Address>
+              <Address>"ninja.exe"+00293140</Address>
               <Offsets>
-                <Offset>42C</Offset>
-                <Offset>604</Offset>
-                <Offset>780</Offset>
-                <Offset>50</Offset>
+                <Offset>4</Offset>
+                <Offset>764</Offset>
+                <Offset>748</Offset>
+                <Offset>7F8</Offset>
+                <Offset>568</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
-              <ID>241</ID>
+              <ID>262</ID>
               <Description>"Max HP"</Description>
-              <LastState Value="150" RealAddress="310C23A0"/>
+              <LastState Value="150" RealAddress="15CE3228"/>
               <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+00483714</Address>
+              <Address>"ninja.exe"+00293140</Address>
               <Offsets>
-                <Offset>430</Offset>
-                <Offset>604</Offset>
-                <Offset>780</Offset>
-                <Offset>50</Offset>
+                <Offset>8</Offset>
+                <Offset>764</Offset>
+                <Offset>748</Offset>
+                <Offset>7F8</Offset>
+                <Offset>568</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
               <ID>240</ID>
               <Description>"GodMode"</Description>
-              <LastState Activated="1"/>
+              <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -291,34 +294,34 @@ dealloc(newmem)
             <CheatEntry>
               <ID>175</ID>
               <Description>"X"</Description>
-              <LastState Value="0" RealAddress="36B6604C"/>
+              <LastState Value="0" RealAddress="36B6204C"/>
               <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+0041B748</Address>
+              <Address>"ninja.exe"+0041B74C</Address>
               <Offsets>
                 <Offset>24</Offset>
-                <Offset>C0</Offset>
+                <Offset>130</Offset>
+              </Offsets>
+            </CheatEntry>
+            <CheatEntry>
+              <ID>251</ID>
+              <Description>"Z"</Description>
+              <LastState Value="0" RealAddress="36B62050"/>
+              <VariableType>Float</VariableType>
+              <Address>"ninja.exe"+0041B74C</Address>
+              <Offsets>
+                <Offset>28</Offset>
+                <Offset>130</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
               <ID>238</ID>
-              <Description>"Z"</Description>
-              <LastState Value="0" RealAddress="36B66050"/>
-              <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+0041B748</Address>
-              <Offsets>
-                <Offset>28</Offset>
-                <Offset>C0</Offset>
-              </Offsets>
-            </CheatEntry>
-            <CheatEntry>
-              <ID>178</ID>
               <Description>"Y"</Description>
-              <LastState Value="0" RealAddress="36B66054"/>
+              <LastState Value="0" RealAddress="36B62054"/>
               <VariableType>Float</VariableType>
-              <Address>"ninja.exe"+0041B748</Address>
+              <Address>"ninja.exe"+0041B74C</Address>
               <Offsets>
                 <Offset>2C</Offset>
-                <Offset>C0</Offset>
+                <Offset>130</Offset>
               </Offsets>
             </CheatEntry>
             <CheatEntry>
@@ -818,6 +821,203 @@ dealloc(newmem)
         <Byte>84</Byte>
       </After>
     </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fsub dword ptr [eax+04]</Description>
+      <Address>00423D1B</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>23D1B</ModuleNameOffset>
+      <Before>
+        <Byte>24</Byte>
+        <Byte>0C</Byte>
+        <Byte>D9</Byte>
+        <Byte>41</Byte>
+        <Byte>04</Byte>
+      </Before>
+      <Actual>
+        <Byte>D8</Byte>
+        <Byte>60</Byte>
+        <Byte>04</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>5C</Byte>
+        <Byte>24</Byte>
+        <Byte>08</Byte>
+        <Byte>D9</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fsub dword ptr [eax+08]</Description>
+      <Address>00423D3C</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>23D3C</ModuleNameOffset>
+      <Before>
+        <Byte>24</Byte>
+        <Byte>0C</Byte>
+        <Byte>D9</Byte>
+        <Byte>41</Byte>
+        <Byte>08</Byte>
+      </Before>
+      <Actual>
+        <Byte>D8</Byte>
+        <Byte>60</Byte>
+        <Byte>08</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>5C</Byte>
+        <Byte>24</Byte>
+        <Byte>08</Byte>
+        <Byte>D9</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fsub dword ptr [eax]</Description>
+      <Address>00423D52</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>23D52</ModuleNameOffset>
+      <Before>
+        <Byte>5C</Byte>
+        <Byte>24</Byte>
+        <Byte>10</Byte>
+        <Byte>D9</Byte>
+        <Byte>01</Byte>
+      </Before>
+      <Actual>
+        <Byte>D8</Byte>
+        <Byte>20</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>5C</Byte>
+        <Byte>24</Byte>
+        <Byte>08</Byte>
+        <Byte>D8</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of sub esi,edi</Description>
+      <Address>0042E00F</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>2E00F</ModuleNameOffset>
+      <Before>
+        <Byte>B6</Byte>
+        <Byte>38</Byte>
+        <Byte>0F</Byte>
+        <Byte>B6</Byte>
+        <Byte>31</Byte>
+      </Before>
+      <Actual>
+        <Byte>2B</Byte>
+        <Byte>F7</Byte>
+      </Actual>
+      <After>
+        <Byte>75</Byte>
+        <Byte>45</Byte>
+        <Byte>83</Byte>
+        <Byte>EA</Byte>
+        <Byte>01</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of movzx esi,byte ptr [ecx]</Description>
+      <Address>0042E00C</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>2E00C</ModuleNameOffset>
+      <Before>
+        <Byte>74</Byte>
+        <Byte>5D</Byte>
+        <Byte>0F</Byte>
+        <Byte>B6</Byte>
+        <Byte>38</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>B6</Byte>
+        <Byte>31</Byte>
+      </Actual>
+      <After>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>75</Byte>
+        <Byte>45</Byte>
+        <Byte>83</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of movzx edi,byte ptr [eax]</Description>
+      <Address>0042E009</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>2E009</ModuleNameOffset>
+      <Before>
+        <Byte>EC</Byte>
+        <Byte>85</Byte>
+        <Byte>D2</Byte>
+        <Byte>74</Byte>
+        <Byte>5D</Byte>
+      </Before>
+      <Actual>
+        <Byte>0F</Byte>
+        <Byte>B6</Byte>
+        <Byte>38</Byte>
+      </Actual>
+      <After>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+        <Byte>90</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of mov esi,[ecx]</Description>
+      <Address>0042DFF1</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>2DFF1</ModuleNameOffset>
+      <Before>
+        <Byte>00</Byte>
+        <Byte>00</Byte>
+        <Byte>8D</Byte>
+        <Byte>4B</Byte>
+        <Byte>24</Byte>
+      </Before>
+      <Actual>
+        <Byte>8B</Byte>
+        <Byte>31</Byte>
+      </Actual>
+      <After>
+        <Byte>3B</Byte>
+        <Byte>30</Byte>
+        <Byte>75</Byte>
+        <Byte>12</Byte>
+        <Byte>83</Byte>
+      </After>
+    </CodeEntry>
+    <CodeEntry>
+      <Description>Change of fsub dword ptr [edx+04]</Description>
+      <Address>0042DA58</Address>
+      <ModuleName>ninja.exe</ModuleName>
+      <ModuleNameOffset>2DA58</ModuleNameOffset>
+      <Before>
+        <Byte>D8</Byte>
+        <Byte>22</Byte>
+        <Byte>D9</Byte>
+        <Byte>41</Byte>
+        <Byte>04</Byte>
+      </Before>
+      <Actual>
+        <Byte>D8</Byte>
+        <Byte>62</Byte>
+        <Byte>04</Byte>
+      </Actual>
+      <After>
+        <Byte>D9</Byte>
+        <Byte>41</Byte>
+        <Byte>08</Byte>
+        <Byte>D8</Byte>
+        <Byte>62</Byte>
+      </After>
+    </CodeEntry>
   </CheatCodes>
   <UserdefinedSymbols/>
   <LuaScript>--TRAINERGENERATORSTART--
@@ -855,6 +1055,16 @@ end
 --TRAINERGENERATORSTOP--
 </LuaScript>
   <DisassemblerComments>
+    <DisassemblerComment>
+      <Address>"ninja.exe"+23D1B</Address>
+      <Comment>Sub Z positioning
+</Comment>
+    </DisassemblerComment>
+    <DisassemblerComment>
+      <Address>"ninja.exe"+23D2E</Address>
+      <Comment>Related to player Z positioning.
+</Comment>
+    </DisassemblerComment>
     <DisassemblerComment>
       <Address>"ninja.exe"+2DC18</Address>
       <Comment>Coordinate 1
