@@ -3,8 +3,8 @@ Mini Ninjas cheat table with AOB Injection.
 
 # Screenshots
 <div>
-    <img src="https://i.imgur.com/VHRj1s3.png" width="500"></a>
-    <img src="https://i.imgur.com/4OsUGFv.png" width="500"></a>
+    <img src="https://i.imgur.com/VHRj1s3.png" width="400"></a>
+    <img src="https://i.imgur.com/4OsUGFv.png" width="400"></a>
 </div>
 
 # Hotkeys
@@ -14,6 +14,19 @@ Insert/Delete|Increase/Decrease X Coordinates by 150
 Home/End|Increase/Decrease Y Coordinates by 150
 PageUp/PageDown|Increase/Decrease Z Coordinates by 200
 NumLock|Toggle the loading of Z vector positions on all entities
+/|Zoom In player camera
+*|Zoom Out player camera
+
+# Game Engine Details
+
+## Folliage
+Folliage and other effects such as wind and floating dandelion seeds are simulated using 2D sprites, such sprites have a fixed point where they rotate around in all axis always following the player. This gives an easy and cheap effect to use in trees and bushes.
+
+## Water Reflection
+Having the Wii as one of the console targets means having reduced graphical effects, developers opted to simply mirror some models vertically and put them under the water to mimic light reflection.
+
+## Cutscenes and early character unlock
+In Mini Ninjas you unlock characters by destroyed the cage that they're locked on. During in-game cutscenes if you lock the loading of one of the game's vector axis this cage can break and lead you to unlocking said character earlier than intended.
 
 # Addresses
 |Address|Bytes|Overridden Opcode|Comment|
