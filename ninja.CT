@@ -10,14 +10,12 @@
         <CheatEntry>
           <ID>243</ID>
           <Description>"Some sort of counter"</Description>
-          <LastState Value="3221338814" RealAddress="30E8A9F8"/>
           <VariableType>4 Bytes</VariableType>
           <Address>30E8A9F8</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>244</ID>
           <Description>"Counter related to dmg taken"</Description>
-          <LastState Value="2281815040" RealAddress="30E8A9F4"/>
           <VariableType>4 Bytes</VariableType>
           <Address>30E8A9F4</Address>
         </CheatEntry>
@@ -38,7 +36,7 @@
             <CheatEntry>
               <ID>304</ID>
               <Description>"Lock Mouse Y Axis"</Description>
-              <LastState Activated="1"/>
+              <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -86,7 +84,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>182</ID>
               <Description>"X"</Description>
-              <LastState Value="4261.986816" RealAddress="15BE1BA8"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
@@ -97,7 +94,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>205</ID>
               <Description>"Z"</Description>
-              <LastState Value="-8670.780273" RealAddress="15BE1BAC"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
@@ -108,7 +104,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>183</ID>
               <Description>"Y"</Description>
-              <LastState Value="10226.80371" RealAddress="15BE1BB0"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE194</Address>
               <Offsets>
@@ -119,7 +114,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>44</ID>
               <Description>"Distance to Player"</Description>
-              <LastState Value="716.7496338" RealAddress="37D10680"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE190</Address>
               <Offsets>
@@ -147,7 +141,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>179</ID>
               <Description>"Neg. Distance"</Description>
-              <LastState Value="-716.7496338" RealAddress="37D1067C"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+005DE190</Address>
               <Offsets>
@@ -194,13 +187,13 @@ dealloc(newmem)
           <ID>119</ID>
           <Description>"Camera Collision"</Description>
           <Options moActivateChildrenAsWell="1"/>
-          <LastState Value="" Activated="1" RealAddress="00000000"/>
+          <LastState Value="" RealAddress="00000000"/>
           <GroupHeader>1</GroupHeader>
           <CheatEntries>
             <CheatEntry>
               <ID>167</ID>
               <Description>"Disable Camera Collision 1"</Description>
-              <LastState Activated="1"/>
+              <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -239,7 +232,7 @@ dealloc(newmem)
             <CheatEntry>
               <ID>168</ID>
               <Description>"Disable Camera Collision 2"</Description>
-              <LastState Activated="1"/>
+              <LastState/>
               <VariableType>Auto Assembler Script</VariableType>
               <AssemblerScript>[ENABLE]
 
@@ -289,7 +282,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>261</ID>
               <Description>"HP"</Description>
-              <LastState Value="350" RealAddress="29E5D624"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+00293140</Address>
               <Offsets>
@@ -303,7 +295,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>262</ID>
               <Description>"Max HP"</Description>
-              <LastState Value="150" RealAddress="29E5D628"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+00293140</Address>
               <Offsets>
@@ -396,7 +387,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>175</ID>
               <Description>"X"</Description>
-              <LastState Value="-1016.97998" RealAddress="37A3A90C"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+0041B74C</Address>
               <Offsets>
@@ -425,7 +415,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>251</ID>
               <Description>"Z"</Description>
-              <LastState Value="-6319.47998" RealAddress="37A3A910"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+0041B74C</Address>
               <Offsets>
@@ -454,7 +443,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>238</ID>
               <Description>"Y"</Description>
-              <LastState Value="5293.180176" RealAddress="37A3A914"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+0041B74C</Address>
               <Offsets>
@@ -601,6 +589,55 @@ unregistersymbol(INJECT)
 dealloc(newmem)
 </AssemblerScript>
             </CheatEntry>
+            <CheatEntry>
+              <ID>306</ID>
+              <Description>"Mooonjump"</Description>
+              <LastState/>
+              <VariableType>Auto Assembler Script</VariableType>
+              <AssemblerScript>[ENABLE]
+
+aobscanmodule(INJECT,ninja.exe,D8 4C 24 14 D9 41 08) // should be unique
+alloc(newmem,$1000)
+
+label(code)
+label(return)
+
+newmem:
+
+code:
+  nop
+  nop
+  nop
+  nop
+  fld dword ptr [ecx+08]
+  jmp return
+
+INJECT:
+  jmp newmem
+  nop
+  nop
+return:
+registersymbol(INJECT)
+
+[DISABLE]
+
+INJECT:
+  db D8 4C 24 14 D9 41 08
+
+unregistersymbol(INJECT)
+dealloc(newmem)
+
+</AssemblerScript>
+              <Hotkeys>
+                <Hotkey>
+                  <Action>Toggle Activation</Action>
+                  <Keys>
+                    <Key>38</Key>
+                  </Keys>
+                  <ID>0</ID>
+                </Hotkey>
+              </Hotkeys>
+            </CheatEntry>
           </CheatEntries>
         </CheatEntry>
         <CheatEntry>
@@ -612,7 +649,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>297</ID>
               <Description>"X"</Description>
-              <LastState Value="-111.0770264" RealAddress="37981B8C"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+0041B8E0</Address>
               <Offsets>
@@ -622,7 +658,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>296</ID>
               <Description>"Z"</Description>
-              <LastState Value="-56.05623627" RealAddress="37981B90"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+0041B8E0</Address>
               <Offsets>
@@ -650,7 +685,6 @@ dealloc(newmem)
             <CheatEntry>
               <ID>298</ID>
               <Description>"Y"</Description>
-              <LastState Value="-100.6826248" RealAddress="37981B94"/>
               <VariableType>Float</VariableType>
               <Address>"ninja.exe"+0041B8E0</Address>
               <Offsets>
@@ -703,6 +737,12 @@ dealloc(newmem)
 </AssemblerScript>
         </CheatEntry>
       </CheatEntries>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>305</ID>
+      <Description>"Float"</Description>
+      <VariableType>Float</VariableType>
+      <Address>158D934C</Address>
     </CheatEntry>
   </CheatEntries>
   <CheatCodes>
