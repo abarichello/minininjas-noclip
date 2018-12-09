@@ -1,12 +1,14 @@
 # Mini Ninjas Hacking
 Mini Ninjas cheat table with AOB Injection.
 
+[Check a video using this Cheat Table](https://www.youtube.com/watch?v=9mLYZN0rCHs&list=PLL93Jwp7IFnfVchBIZe4YQPPPMHNvP1IJ&index=2).
+
 # Screenshots
 <div>
-    <img src="https://i.imgur.com/7oiScUV.png" width="400"></a>
-    <img src="https://i.imgur.com/jn9mf7J.png" width="400"></a>
-    <img src="https://i.imgur.com/VHRj1s3.png" width="400"></a>
-    <img src="https://i.imgur.com/TUoH4I5.png" width="400"></a>
+    <img src="https://i.imgur.com/7oiScUV.png" width="400" href="https://www.youtube.com/watch?v=9mLYZN0rCHs"></a>
+    <img src="https://i.imgur.com/jn9mf7J.png" width="400" href="https://www.youtube.com/watch?v=9mLYZN0rCHs"></a>
+    <img src="https://i.imgur.com/VHRj1s3.png" width="400" href="https://www.youtube.com/watch?v=9Qr7wryxKgE"></a>
+    <img src="https://i.imgur.com/TUoH4I5.png" width="400" href="https://www.youtube.com/watch?v=9Qr7wryxKgE"></a>
 </div>
 
 # Hotkeys
